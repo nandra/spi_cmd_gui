@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    if (init_device() < 0) {
+    if (iqrf_init_device() < 0) {
         ui->pushButton->setDisabled(true);
     }
 }
@@ -38,7 +38,7 @@ void MainWindow::on_pushButton_released()
         int i = arr.count();
         unsigned char *data = (unsigned char *)arr.data();
 
-        read_write_spi_cmd_data(data, i, true);
+        iqrf_read_write_spi_cmd_data(data, i, true);
         ui->lineEdit->clear();
 
     }
