@@ -15,4 +15,4 @@ HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
 
-LIBS += -L/usr/local/lib -liqrf -L/usr/lib -lusb
+LIBS += -L/usr/local/lib -liqrf -L/usr/lib/i386-linux-gnu/ -lusb-1.0
